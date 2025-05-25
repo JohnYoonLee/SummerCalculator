@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <p class="answer"></p>
+
+</body>
+<script>
+
+    let number1 = prompt("Please enter a number: ");
+    number1 =parseInt(number1)
+
+    if (!(isNaN(number1))) {
+        console.log("is a number")
+        
+        let operate = prompt("Please enter a simple operator (+, -, *, /):")
+    switch(operate) {
+        case "+":
+        case "-":
+        case "*":
+        case "/":
+        console.log("proper operator");
+
+        let number2 = prompt("Please enter a second number: ");
+        number2 =parseInt(number2)
+
+        if (!(isNaN(number2)) && operate == "+") {
+        console.log("is a number")
+
+    let total = number1 + number2; 
+
+    console.log(total)
+
+    alert("The total is : " + total);
+    }
+        else if (!(isNaN(number2)) && operate == "-") {
+        console.log("is a number")
+    let total = number1 - number2;
+    console.log(total)
+
+    alert("The total is : " + total);
+    }
+
+        else if (!(isNaN(number2)) && operate == "/") {
+        console.log("is a number")
+    let total = number1 / number2;
+    console.log(total)
+
+    alert("The total is : " + total);
+    }
+    
+        else if (!(isNaN(number2)) && operate == "*") {
+        console.log("is a number")
+    let total = number1 * number2;
+    console.log(total)
+    
+    alert("The total is : " + total);
+    }
+    
+    else{
+        console.log("not a number")
+    }
+            break;
+            default:
+            console.log("Not an operator");
+    }
+    
+    }
+    else{
+        console.log("not a number")
+        
+    }
+   
+</script>
+
+</html>
